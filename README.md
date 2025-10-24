@@ -32,20 +32,20 @@
 ##  <p align="center"><b>**ЛІСТИНГ КОДУ**</b></p>
 # ![Г1](https://img.shields.io/badge/1-brightgreen?style=for-the-badge) List general task
 ```lisp
-CL-USER> (set 'a (cons '(7 8) (list 'x '() 5 '(y 9))))
-((7 8) X NIL 5 (Y 9))
+CL-USER> (set 'a (cons '(1 2) (list 'b '() 3 '(4 c))))
+((1 2) B NIL 3 (4 C))
 CL-USER> a
-((7 8) X NIL 5 (Y 9))
+((1 2) B NIL 3 (4 C))
 ```
 # ![Г2](https://img.shields.io/badge/2-brightgreen?style=for-the-badge) Get a head
 ```lisp
 CL-USER> (car a)
-(7 8)
+(1 2)
 ```
 # ![Г3](https://img.shields.io/badge/3-brightgreen?style=for-the-badge) Get a tail
 ```lisp
 CL-USER> (cdr a)
-(X NIL 5 (Y 9))
+(B NIL 3 (4 C))
 ```
 # ![Г4](https://img.shields.io/badge/4-brightgreen?style=for-the-badge) Get the third item in the list
 ```lisp
@@ -55,7 +55,7 @@ NIL
 # ![Г5](https://img.shields.io/badge/5-brightgreen?style=for-the-badge) Get the last item in the list
 ```lisp
 CL-USER> (nth 4 a)
-(Y 9)
+(4 C)
 ```
 # ![Г6](https://img.shields.io/badge/6-brightgreen?style=for-the-badge) Use ***ATOM*** та ***LISTP***
 ```lisp
@@ -74,7 +74,7 @@ T
 ```
 # ![Г7](https://img.shields.io/badge/7-brightgreen?style=for-the-badge) Other predicates
 ```lisp
-CL-USER> (evenp (first (a)))
+CL-USER> (evenp (first (nth 4 a)))
 T
 CL-USER> (numberp (second (nth 4 a)))
 NIL
@@ -84,7 +84,7 @@ T
 # ![Г8](https://img.shields.io/badge/8-brightgreen?style=for-the-badge) Merge the created list
 ```lisp
 CL-USER> (append a (nth 4 a))
-((7 8) X NIL 5 (Y 9) Y 9)
+((1 2) B NIL 3 (4 C) 4 C)
 ```
 ## KV-21 SAIUK VAR 8(16)
 <p align="center">
